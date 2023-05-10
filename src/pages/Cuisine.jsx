@@ -21,7 +21,12 @@ const Cuisine = () => {
    return (
       <div>
          {/*<h1 className="text-center font-semibold mb-8 text-4xl">{params.type} Cuisine</h1> */}
-         <div className="grid">
+         <motion.div 
+            animate={{opacity: 1}}
+            initial={{opacity: 0}}
+            exit={{opacity: 0}}
+            transition={{duration: 0.5}}
+         className="grid">
             {cuisine.map((item) => {
                return(   
                   <div className="card" key={item.id}>
@@ -32,7 +37,7 @@ const Cuisine = () => {
                   </div>          
                )
             })}
-         </div>
+         </motion.div>
       </div>
    )
 }

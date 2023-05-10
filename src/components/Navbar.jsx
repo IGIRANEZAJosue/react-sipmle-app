@@ -7,7 +7,7 @@ const Navbar = () => {
       <nav className=" mt-8 mb-12 flex justify-between">
          <div className="logo">
             <Link className="flex items-center gap-4" to={"/"}>
-               <i class="fa-regular fa-fork-knife text-4xl"></i>
+               <i className="fa-regular fa-fork-knife text-4xl"></i>
                <h1 className="font-bold text-2xl">MyRecipe.eat</h1>
             </Link>
          </div>
