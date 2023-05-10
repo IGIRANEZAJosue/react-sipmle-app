@@ -1,6 +1,7 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Veggie = () => {
 
@@ -19,7 +20,7 @@ const Veggie = () => {
          
       } else {
          const api = await fetch(
-            `https://api.spoonacular.com/recipes/random?apiKey=d16ca04474df45c59d0b32ffd9684dc5&number=9&tag=vegetarian`
+            `https://api.spoonacular.com/recipes/random?apiKey=821d67e71f27488589077e8ea33beacf&number=9&tag=vegetarian`
          );
          const data = await api.json();
 
@@ -42,11 +43,13 @@ const Veggie = () => {
                {veggie.map((recipe) => {
                   return(
                      <SplideSlide key={recipe.id}>
-                        <div className="card min-h-[12rem] rounded-[1rem] overflow-hidden relative" >
-                           <p className="absolute z-10 left-1/2 bottom-0 -translate-x-1/2 translate-y-0 text-white w-[100%] text-center font-semibold text-[1rem] h-[40%] flex justify-center items-center">{recipe.title}</p>
-                           <img className="rounded-[1rem] absolute left-0 w-full h-full object-cover" src={recipe.image} alt={recipe.title} />
-                           <div className="gradient"></div>
-                        </div>
+                        <Link to={"/recipe/" + recipe.id}>
+                           <div className="card min-h-[12rem] rounded-[1rem] overflow-hidden relative" >
+                              <p className="absolute z-10 left-1/2 bottom-0 -translate-x-1/2 translate-y-0 text-white w-[100%] text-center font-semibold text-[1rem] h-[40%] flex justify-center items-center">{recipe.title}</p>
+                              <img className="rounded-[1rem] absolute left-0 w-full h-full object-cover" src={recipe.image} alt={recipe.title} />
+                              <div className="gradient"></div>
+                           </div>
+                        </Link>
                      </SplideSlide> 
                   )
                })}
