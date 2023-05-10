@@ -22,7 +22,7 @@ const Recipe = () => {
       <div className="detailWrapper">
          <div className="min-w-[40%]">
             <h2 className="mb-6 text-xl font-semibold">{details.title}</h2>
-            <img src={details.image} alt={details.title} />
+            <img src={details.image} alt={details.title} className="rounded-lg" />
          </div>
          <div className="info ml-12 w-[60%]">
             
