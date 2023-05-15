@@ -13,10 +13,10 @@ const Search = () => {
    }
 
    return (
-      <form onSubmit={submitHandler} className=" form my-2 mx-[8rem] ">
+      <form onSubmit={submitHandler} className=" form my-2 lg:mx-[8rem] ">
          <div>
             <i className="fa-solid fa-magnifying-glass"></i>
-            <input onChange={(e) => setInput(e.target.value)} className="searchInput" type="text" value={input} />
+            <input onChange={(e) => setInput(e.target.value)} className="searchInput w-full" type="text" value={input} />
          </div>
       </form>
    )

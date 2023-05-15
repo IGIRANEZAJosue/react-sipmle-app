@@ -35,8 +35,18 @@ const Veggie = () => {
             <h3 className="text-2xl font-bold my-4">Our Vegetarian Picks</h3>
             <Splide options={{
                perPage: 3,
+               breakpoints: {
+                  480: {
+                     perPage: 1,
+                     snap: true
+                  },
+                  640: {
+                     perPage: 2,
+                     snap: true                        
+                  }
+               },
                arrows: false,
-               pagination:false,
+               pagination: true,
                drag: "free",
                gap: "2rem",
             }}>
