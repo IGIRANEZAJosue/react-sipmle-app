@@ -90,7 +90,7 @@
 
 @media screen and (max-width: 480px) {
     .category {
-        width: 4.5rem;
+        width: 4rem;
         height:4rem;
         font-size: 12px;
         padding: 4px;
