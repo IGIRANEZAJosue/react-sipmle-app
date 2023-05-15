@@ -9,7 +9,7 @@ const Recipe = () => {
    const [activeTab, setActiveTab] = useState("instructions");
 
    const fetchDetails = async () => {
-      const data = await fetch(`https://api.spoonacular.com/recipes/${params.name}/information?apiKey=821d67e71f27488589077e8ea33beacf`);
+      const data = await fetch(`https://api.spoonacular.com/recipes/${params.name}/information?apiKey=821d67e71f27488589077e8ea33beacf `);
       const detailData = await data.json();
       setDetails(detailData);
    };
@@ -24,7 +24,7 @@ const Recipe = () => {
             <h2 className="mb-6 text-xl font-semibold capitalize">{details.title}</h2>
             <img src={details.image} alt={details.title} className="rounded-lg" />
          </div>
-         <div className="info lg:ml-12 w-full lg:w-[60%]">
+         <div className="info lg:ml-12 w-full lg:w-[60%] lg:mt-12">
             
             <div className=" w-full flex gap-8 justify-between md:justify-start">
                <button  className={activeTab === "instructions" ? "active button" : "button"} onClick={() => setActiveTab("instructions")} >Instructions</button>
