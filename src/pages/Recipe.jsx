@@ -9,7 +9,7 @@ const Recipe = () => {
    const [activeTab, setActiveTab] = useState("instructions");
 
    const fetchDetails = async () => {
-      const data = await fetch(`https://api.spoonacular.com/recipes/${params.name}/information?apiKey=d16ca04474df45c59d0b32ffd9684dc5`);
+      const data = await fetch(`https://api.spoonacular.com/recipes/${params.name}/information?apiKey=19dffa90f10e478195fd407ac7b7e23c`);
       const detailData = await data.json();
       setDetails(detailData);
    };
@@ -19,15 +19,17 @@ const Recipe = () => {
    }, [params.name]);
 
    return (
-      <div className="detailWrapper flex flex-col lg:flex-row gap-8">
+      <div className="detailWrapper flex flex-col lg:flex-row gap-8 -mt-2">
          <div className="min-w-[40%]">
             <h2 className="mb-6 text-xl font-semibold capitalize">{details.title}</h2>
             <img src={details.image} alt={details.title} className="rounded-lg" />
          </div>
          <div className="info lg:ml-12 w-full lg:w-[60%]">
             
-            <button  className={activeTab === "instructions" ? "active button" : "button"} onClick={() => setActiveTab("instructions")} >Instructions</button>
-            <button  className={activeTab === "ingredients" ? "active button" : "button"} onClick={() => setActiveTab("ingredients")} >Ingredients</button>
+            <div className=" w-full flex gap-8 justify-between md:justify-start">
+               <button  className={activeTab === "instructions" ? "active button" : "button"} onClick={() => setActiveTab("instructions")} >Instructions</button>
+               <button  className={activeTab === "ingredients" ? "active button" : "button"} onClick={() => setActiveTab("ingredients")} >Ingredients</button>
+            </div>
                
             {activeTab === "instructions" && (
                <div className="w-[100%] mt-8">
@@ -37,7 +39,7 @@ const Recipe = () => {
             )};   
                
             {activeTab === "ingredients" &&(
-               <ul className="mt-8 ml-12">
+               <ul className="mt-8 ml-6">
                   {details.extendedIngredients.map((ingredient) => (
                      <li key={ingredient.id}>{ingredient.original}</li>
                   ))}

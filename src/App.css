@@ -71,7 +71,7 @@
 
 
 .button {
-    @apply px-4 py-2 mr-8 border-2 border-[#313131] ;
+    @apply px-6 py-2 border-2 border-[#313131] ;
 
     /* padding: 0.5rem 1.5rem;
     color: #313131;

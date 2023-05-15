@@ -13,7 +13,7 @@ const Navbar = () => {
          </div>
 
          <div className="font-medium text-md flex items-center gap-8">
-            <Link to={"/"} className="flex items-center gap-4" >
+            <Link to={"/"} className="hidden md:flex items-center gap-4" >
                <p>Home</p>
             </Link>
 
@@ -24,6 +24,8 @@ const Navbar = () => {
             <Link to={"/"} className="hidden md:flex items-center gap-4" >
                <p>Contact us</p>
             </Link>
+
+            
 
          </div>  
          
