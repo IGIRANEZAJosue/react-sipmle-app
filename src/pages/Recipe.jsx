@@ -26,7 +26,7 @@ const Recipe = () => {
          </div>
          <div className="info lg:ml-12 w-full lg:w-[60%] lg:mt-12">
             
-            <div className=" w-full flex gap-8 justify-between md:justify-start">
+            <div className=" w-full flex md:gap-8 justify-between md:justify-start">
                <button  className={activeTab === "instructions" ? "active button" : "button"} onClick={() => setActiveTab("instructions")} >Instructions</button>
                <button  className={activeTab === "ingredients" ? "active button" : "button"} onClick={() => setActiveTab("ingredients")} >Ingredients</button>
             </div>
