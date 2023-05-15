@@ -21,7 +21,7 @@ const Popular = () => {
          
       } else {
          const api = await fetch(
-            `https://api.spoonacular.com/recipes/random?apiKey=19dffa90f10e478195fd407ac7b7e23c&number=9`
+            `https://api.spoonacular.com/recipes/random?apiKey=821d67e71f27488589077e8ea33beacf&number=9`
          );
          const data = await api.json();
 
