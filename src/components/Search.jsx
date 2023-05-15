@@ -14,7 +14,7 @@ const Search = () => {
 
    return (
       <form onSubmit={submitHandler} className=" form my-2 lg:mx-[8rem] ">
-         <div>
+         <div className="flex gap-4">
             <i className="fa-solid fa-magnifying-glass"></i>
             <input onChange={(e) => setInput(e.target.value)} className="searchInput w-full" type="text" value={input} />
          </div>

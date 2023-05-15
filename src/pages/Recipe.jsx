@@ -19,12 +19,12 @@ const Recipe = () => {
    }, [params.name]);
 
    return (
-      <div className="detailWrapper">
+      <div className="detailWrapper flex flex-col lg:flex-row gap-8">
          <div className="min-w-[40%]">
-            <h2 className="mb-6 text-xl font-semibold">{details.title}</h2>
+            <h2 className="mb-6 text-xl font-semibold capitalize">{details.title}</h2>
             <img src={details.image} alt={details.title} className="rounded-lg" />
          </div>
-         <div className="info ml-12 w-[60%]">
+         <div className="info lg:ml-12 w-full lg:w-[60%]">
             
             <button  className={activeTab === "instructions" ? "active button" : "button"} onClick={() => setActiveTab("instructions")} >Instructions</button>
             <button  className={activeTab === "ingredients" ? "active button" : "button"} onClick={() => setActiveTab("ingredients")} >Ingredients</button>
