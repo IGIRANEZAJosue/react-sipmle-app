@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom"
 
 const Category = () => {
    return (
-      <div className="flex justify-center gap-6 my-8 mx-0">
+      <div className="flex justify-center gap-4 md:gap-8 my-8 mx-0">
          <NavLink to={"/cuisine/Italian"} className="category">
             <i className="fa-light fa-pizza-slice"></i>
             <h4>Italian</h4>
