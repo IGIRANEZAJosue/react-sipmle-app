@@ -43,9 +43,9 @@ const Navbar = () => {
          </div>
 
 
-         <div className={nav ? " md:hidden fixed left-0 top-0 h-full border-r border-r-gray-700 bg-[#313131] text-white z-20 ease-in-out duration-500" : "fixed left-[-100%] md:hidden"}>
+         <div className={nav ? " md:hidden fixed left-0 top-0 h-[120vh] border-r border-r-gray-700 bg-[#313131] text-white z-20 ease-in-out duration-500" : "fixed left-[-100%] md:hidden"}>
             
-            <div className="logo ml-8 mr-6 mt-8">
+            <div onClick={handleNav} className="logo ml-8 mr-6 mt-8">
                <Link className="flex items-center gap-4 z-40" to={"/"}>
                   <i className="fa-regular fa-fork-knife text-4xl"></i>
                   <h1 className="font-bold text-2xl">MyRecipe.eat</h1>
@@ -53,22 +53,22 @@ const Navbar = () => {
             </div>
             
             <div className="pt-4">
-               <div className="border-b border-gray-300 hover:bg-gray-300/20 duration-150 ease-in">
+               <div onClick={handleNav} className="border-b border-gray-300 hover:bg-gray-300/20 duration-150 ease-in">
                   <Link to={"/"} className="p-4" >
                      <p className=" ml-8">Home</p>
                   </Link>
                </div>
-               <div className="border-b border-gray-300 hover:bg-gray-300/20 duration-150 ease-in">
+               <div onClick={handleNav} className="border-b border-gray-300 hover:bg-gray-300/20 duration-150 ease-in">
                   <Link to={"/"} className="p-4" >
                      <p className=" ml-8">Services</p>
                   </Link>
                </div>
-               <div className="border-b border-gray-300 hover:bg-gray-300/20 duration-150 ease-in">
+               <div onClick={handleNav} className="border-b border-gray-300 hover:bg-gray-300/20 duration-150 ease-in">
                   <Link to={"/"} className="p-4" >
                      <p className=" ml-8">About Us</p>
                   </Link>
                </div>
-               <div className="border-b border-gray-300 hover:bg-gray-300/20 duration-150 ease-in">
+               <div onClick={handleNav} className="border-b border-gray-300 hover:bg-gray-300/20 duration-150 ease-in">
                   <Link to={"/"} className="p-4" >
                      <p className=" ml-8">Contact</p>
                   </Link>
